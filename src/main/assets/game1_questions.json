@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "questionNumber": 1,
+    "choices": ["KURYENTI", "KORYENTE", "KURYENTE"],
+    "correctAnswer": "KORYENTE"
+  },
+  {
+    "id": 2,
+    "questionNumber": 2,
+    "choices": ["EBEDENSIYA", "EBIDENSIYA", "EBIDENSYA"],
+    "correctAnswer": "EBIDENSIYA"
+  },
+  {
+    "id": 3,
+    "questionNumber": 3,
+    "choices": ["AGRABYADO", "ARGABYADO", "AGRABIYADO"],
+    "correctAnswer": "AGRABYADO"
+  },
+  {
+    "id": 4,
+    "questionNumber": 4,
+    "choices": ["KUMPERENSIYA", "KOMPERENSIYA", "KOMPERENSYA"],
+    "correctAnswer": "KUMPERENSIYA"
+  },
+  {
+    "id": 5,
+    "questionNumber": 5,
+    "choices": ["NAKATUTOLONG", "NAKAKATULONG", "NAKATUTULONG"],
+    "correctAnswer": "NAKATUTULONG"
+  },
+  {
+    "id": 6,
+    "questionNumber": 6,
+    "choices": ["KONTROBERSYAL", "KONTROBERSIYAL", "KUNTROBERSIYAL"],
+    "correctAnswer": "KONTROBERSIYAL"
+  },
+  {
+    "id": 7,
+    "questionNumber": 7,
+    "choices": ["MIYERKULES", "MIYERKOLIS", "MIYERKOLES"],
+    "correctAnswer": "MIYERKOLES"
+  },
+  {
+    "id": 8,
+    "questionNumber": 8,
+    "choices": ["KUMPIYANSIYA", "KOMPIYANSA", "KUMPIYANSA"],
+    "correctAnswer": "KUMPIYANSA"
+  },
+  {
+    "id": 9,
+    "questionNumber": 9,
+    "choices": ["ABILEDAD", "ABILIDAD", "ABELEDAD"],
+    "correctAnswer": "ABILIDAD"
+  },
+  {
+    "id": 10,
+    "questionNumber": 10,
+    "choices": ["ADIKSYON", "ADIKSIYON", "ADEKSIYON"],
+    "correctAnswer": "ADIKSIYON"
+  },
+  {
+    "id": 11,
+    "questionNumber": 11,
+    "choices": ["AKTITOD", "ATTITUD", "AKTITUD"],
+    "correctAnswer": "AKTITUD"
+  },
+  {
+    "id": 12,
+    "questionNumber": 12,
+    "choices": ["ALA-ALA", "ALAALA", "ALALA"],
+    "correctAnswer": "ALAALA"
+  },
+  {
+    "id": 13,
+    "questionNumber": 13,
+    "choices": ["ANU-ANO", "ANO-ANO", "ANO ANO"],
+    "correctAnswer": "ANO-ANO"
+  },
+  {
+    "id": 14,
+    "questionNumber": 14,
+    "choices": ["AUTORISADO", "AWTORISADO", "AWTORESADO"],
+    "correctAnswer": "AWTORISADO"
+  },
+  {
+    "id": 15,
+    "questionNumber": 15,
+    "choices": ["BARANGGAY", "BARANGAY", "BARANGAI"],
+    "correctAnswer": "BARANGAY"
+  },
+  {
+    "id": 16,
+    "questionNumber": 16,
+    "choices": ["BENIPISYO", "BENEPESYO", "BENEPISYO"],
+    "correctAnswer": "BENEPISYO"
+  },
+  {
+    "id": 17,
+    "questionNumber": 17,
+    "choices": ["BYERNES", "BIYERNES", "BIYIRNIS"],
+    "correctAnswer": "BIYERNES"
+  },
+  {
+    "id": 18,
+    "questionNumber": 18,
+    "choices": ["BULPEN", "BOLPEN", "BOLFEN"],
+    "correctAnswer": "BOLPEN"
+  },
+  {
+    "id": 19,
+    "questionNumber": 19,
+    "choices": ["BUMBERO", "BOMBERO", "BUMBIRU"],
+    "correctAnswer": "BOMBERO"
+  },
+  {
+    "id": 20,
+    "questionNumber": 20,
+    "choices": ["BUENAS", "BUWENAS", "BOWENAS"],
+    "correctAnswer": "BUWENAS"
+  },
+  {
+    "id": 21,
+    "questionNumber": 21,
+    "choices": ["DIPENDE", "DEPENDE", "DEPENLU"],
+    "correctAnswer": "DEPENDE"
+  },
+  {
+    "id": 22,
+    "questionNumber": 22,
+    "choices": ["DIRETSO", "DERETSO", "DIRITSO"],
+    "correctAnswer": "DERETSO"
+  },
+  {
+    "id": 23,
+    "questionNumber": 23,
+    "choices": ["DESKARTE", "DISKARTE", "DISKARTI"],
+    "correctAnswer": "DISKARTE"
+  },
+  {
+    "id": 24,
+    "questionNumber": 24,
+    "choices": ["DYALEKTO", "DIYALEKTO", "DIYALIKTO"],
+    "correctAnswer": "DIYALEKTO"
+  },
+  {
+    "id": 25,
+    "questionNumber": 25,
+    "choices": ["DYOS", "DIYOS", "JOS"],
+    "correctAnswer": "DIYOS"
+  },
+  {
+    "id": 26,
+    "questionNumber": 26,
+    "choices": ["DYEPNI", "DIYIPNI", "DYIPNI"],
+    "correctAnswer": "DYIPNI"
+  },
+  {
+    "id": 27,
+    "questionNumber": 27,
+    "choices": ["EKSKLUSIBO", "EXCLUSIBO", "ESKLUSIBO"],
+    "correctAnswer": "EKSKLUSIBO"
+  },
+  {
+    "id": 28,
+    "questionNumber": 28,
+    "choices": ["ELEKSYON", "ELEKSIYON", "ELEKSYUN"],
+    "correctAnswer": "ELEKSIYON"
+  },
+  {
+    "id": 29,
+    "questionNumber": 29,
+    "choices": ["ISTUDYANTE", "ESTUDYANTE", "ISTODYANTE"],
+    "correctAnswer": "ESTUDYANTE"
+  },
+  {
+    "id": 30,
+    "questionNumber": 30,
+    "choices": ["ISTRUKTURA", "ESTRUKTURA", "ISTURKTURA"],
+    "correctAnswer": "ESTRUKTURA"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "correctWord": "KORYENTE",
+    "meaning": "Daloy ng elektrisidad na ginagamit sa mga kagamitan.",
+    "definitionClue": "Daloy ng elektrisidad na ginagamit sa bahay at paaralan.",
+    "choices": ["KURYENTE", "KORYENTE", "KURYINTE"],
+    "audioFileName": "koryente"
+  },
+  {
+    "id": 2,
+    "correctWord": "KORTINA",
+    "meaning": "Telang isinasabit sa bintana o pintuan bilang tabing.",
+    "definitionClue": "Tabing na isinasabit sa bintana o pintuan.",
+    "choices": ["KORTINA", "KURTINA", "KORTENA"],
+    "audioFileName": "kortina"
+  },
+  {
+    "id": 3,
+    "correctWord": "MIYERKOLES",
+    "meaning": "Ikatlong araw ng karaniwang linggo.",
+    "definitionClue": "Araw ng linggo sa pagitan ng Martes at Huwebes.",
+    "choices": ["MIYERKOLES", "MIYERKULES", "MIRKOLES"],
+    "audioFileName": "miyerkoles"
+  },
+  {
+    "id": 4,
+    "correctWord": "KABUUAN",
+    "meaning": "Ang kabuuang bilang o buong halaga ng isang bagay.",
+    "definitionClue": "Buong halaga o pinagsama-samang dami ng isang bagay.",
+    "choices": ["KABUUAN", "KABOAN", "KABUOAN"],
+    "audioFileName": "kabuuan"
+  }
+]

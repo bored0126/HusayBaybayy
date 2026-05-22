@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_brown">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="48dp"
+            android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="H"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="@color/logo_teal" android:textSize="56sp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="@color/logo_green" android:textSize="56sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Husay Bayba"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/logo_brown"
+                android:textSize="28sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="y"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/logo_teal"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDictionary"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_btn_dictionary"
+            android:drawableStart="@drawable/ic_home_dictionary"
+            android:drawablePadding="24dp"
+            android:elevation="8dp"
+            android:gravity="center_vertical|start"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Diksiyonaryo"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_dictionary_text"
+            app:drawableTint="@color/btn_dictionary_text"
+            android:fontFamily="sans-serif-light"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMaglaro"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_btn_maglaro"
+            android:drawableStart="@drawable/ic_home_maglaro"
+            android:drawablePadding="24dp"
+            android:elevation="8dp"
+            android:gravity="center_vertical|start"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Maglaro"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_maglaro_text"
+            app:drawableTint="@color/btn_maglaro_text"
+            android:fontFamily="sans-serif-light"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_btn_about"
+            android:drawableStart="@drawable/ic_home_about"
+            android:drawablePadding="24dp"
+            android:elevation="8dp"
+            android:gravity="center_vertical|start"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Tungkol sa aplikasyon"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_about_text"
+            app:drawableTint="@color/btn_about_text"
+            android:fontFamily="sans-serif-light"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSupportDoc"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_btn_support"
+            android:drawableStart="@drawable/ic_home_pagbabaybay"
+            android:drawablePadding="24dp"
+            android:elevation="8dp"
+            android:gravity="center_vertical|start"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Suportang Dokumento"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_support_text"
+            app:drawableTint="@color/btn_support_text"
+            android:fontFamily="sans-serif-light"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_btn_settings"
+            android:drawableStart="@drawable/ic_home_settings"
+            android:drawablePadding="24dp"
+            android:elevation="8dp"
+            android:gravity="center_vertical|start"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Settings"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_settings_text"
+            app:drawableTint="@color/btn_settings_text"
+            android:fontFamily="sans-serif-light"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_btn_logout"
+            android:text="Mag-logout"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+</ScrollView>

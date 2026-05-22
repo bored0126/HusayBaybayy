@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_brown">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="24dp">
+
+            <!-- Logo -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="32dp"
+                android:orientation="horizontal">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="H"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/logo_teal" android:textSize="48sp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textColor="@color/logo_green" android:textSize="48sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Husay Bayba"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/logo_brown"
+                    android:textSize="24sp" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="y"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/logo_teal"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <!-- Word display -->
+            <TextView
+                android:id="@+id/tvWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:background="@drawable/bg_dictionary_word_btn"
+                android:text="Salita"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:layout_marginBottom="48dp"/>
+
+            <!-- Meaning display -->
+            <TextView
+                android:id="@+id/tvMeaning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="160dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/bg_dictionary_meaning"
+                android:text="Kahulugan..."
+                android:textColor="@color/logo_brown"
+                android:fontFamily="sans-serif-light"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:padding="24dp"/>
+
+            <!-- Source button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSource"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_btn_about"
+                android:text="Tingnan ang Pinagmulan"
+                android:textAllCaps="false"
+                android:textColor="@color/btn_about_text"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:elevation="4dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_back_arrow"
+        android:background="@drawable/bg_back_button"
+        android:scaleType="fitCenter"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
