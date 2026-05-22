@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HusayBaybay - Gabay at Manwal ng Paggamit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4e3629;
+            --primary-light: #8d6e63;
+            --secondary: #e6a15c;
+            --accent: #2ecc71;
+            --danger: #e74c3c;
+            --bg: #faf7f2;
+            --card-bg: #ffffff;
+            --text: #2c2520;
+            --text-muted: #706259;
+            --border: #ebdcd0;
+            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --shadow: 0 10px 30px rgba(78, 54, 41, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative top bar */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--primary-light));
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 2px dashed var(--border);
+            padding-bottom: 40px;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 24px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            font-weight: 800;
+            font-family: 'Space Grotesk', sans-serif;
+            box-shadow: 0 8px 20px rgba(78, 54, 41, 0.15);
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Actions Bar (Floating) */
+        .actions-bar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
+            border: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #3b281f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(78, 54, 41, 0.2);
+        }
+
+        /* Navigation Index */
+        .toc {
+            background: #faf7f2;
+            border-radius: var(--radius-md);
+            padding: 25px 30px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+        }
+
+        .toc-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+        }
+
+        @media (max-width: 600px) {
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .toc-list a {
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-list a:hover {
+            color: var(--secondary);
+        }
+
+        /* Main Content */
+        section {
+            margin-bottom: 45px;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: var(--primary-light);
+            margin: 25px 0 12px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Highlight Boxes */
+        .note-box {
+            background-color: rgba(230, 161, 92, 0.08);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 20px 0;
+        }
+
+        .note-box-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        /* Gorgeous Custom Table */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 25px 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            background: white;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        td {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #faf7f2;
+        }
+
+        /* Game Mechanics Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .game-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(78, 54, 41, 0.02);
+            transition: all 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(78, 54, 41, 0.06);
+            border-color: var(--secondary);
+        }
+
+        .game-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--primary-light);
+            color: white;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .game-card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .game-features {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .game-features li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .game-features li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Rules Comparison List */
+        .rules-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .rules-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .rule-card {
+            background: #fdfcfb;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 20px;
+        }
+
+        .rule-card.correct {
+            border-left: 4px solid var(--accent);
+        }
+
+        .rule-card.incorrect {
+            border-left: 4px solid var(--danger);
+        }
+
+        .rule-card-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .rule-card.correct .rule-card-title {
+            color: var(--accent);
+        }
+
+        .rule-card.incorrect .rule-card-title {
+            color: var(--danger);
+        }
+
+        /* Print Specific Styling */
+        @media print {
+            body {
+                background: white;
+                color: black;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .actions-bar {
+                display: none;
+            }
+
+            .toc {
+                background: white;
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+            }
+
+            .game-card {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+
+            section {
+                page-break-inside: auto;
+            }
+
+            h2, h3 {
+                page-break-after: avoid;
+            }
+
+            .note-box {
+                background: #f9f9f9;
+                border-left: 4px solid #333;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo-placeholder">HB</div>
+        <h1>HusayBaybay</h1>
+        <div class="subtitle">Gabay at Manwal ng Paggamit (User Manual)</div>
+    </header>
+
+    <div class="actions-bar">
+        <button class="btn btn-primary" onclick="window.print()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            I-print o I-save bilang PDF
+        </button>
+    </div>
+
+    <nav class="toc">
+        <div class="toc-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            Talaan ng Nilalaman
+        </div>
+        <ul class="toc-list">
+            <li><a href="#auth">1. Pagsisimula at Pag-login</a></li>
+            <li><a href="#home">2. Tahanan ng Mag-aaral</a></li>
+            <li><a href="#games">3. Mga Mode ng Laro</a></li>
+            <li><a href="#settings">4. Settings at Progress</a></li>
+            <li><a href="#admin">5. Dashboard ng Guro</a></li>
+            <li><a href="#rules">6. Gabay sa Pagbabaybay</a></li>
+        </ul>
+    </nav>
+
+    <section id="auth">
+        <h2>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            1. Pagsisimula at Pag-login (Authentication)
+        </h2>
+        <p>Gumagamit ang HusayBaybay ng ligtas na online database para sa pagsusuri at pagsasaayos ng progreso ng bawat manlalaro.</p>
+        <ul>
+            <li><strong>Pagpaparehistro (Registration):</strong> Bago makapaglaro, kailangang magrehistro ng account gamit ang iyong <strong>Pangalan</strong>, <strong>Email</strong>, <strong>Password</strong> (minimum na 6 na karakter), at piliin ang iyong <strong>Seksyon (Section)</strong> mula sa listahan upang maikonekta ang iyong progreso sa klase ng iyong guro.</li>
+            <li><strong>Pag-login (Login):</strong> Gamitin ang rehistradong email at password. Ang system ay may automatic session retention, kaya hindi mo na kailangang mag-login muli tuwing bubuksan ang app maliban kung ikaw ay tahasang mag-sign out.</li>
+        </ul>
+        <div class="note-box">
+            <div class="note-box-title">Pansinin:</div>
+            <p>Awtomatikong tinutukoy ng app kung ikaw ay isang <strong>Player</strong> (mag-aaral) o <strong>Admin</strong> (guro) base sa iyong account profile, at dadalhin ka sa tamang screen pagkatapos mag-login.</p>
+        </div>
+    </section>
+
+    <section id="home">
+        <h2>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            2. Tahanan ng Mag-aaral (Player Home Screen)
+        </h2>
+        <p>Pagkatapos mag-login bilang player, makikita ang limang pangunahing pindutan sa pangunahing screen:</p>
+        
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pindutan</th>
+                        <th>Paglalarawan / Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Maglaro</strong></td>
+                        <td>Bubuksan ang listahan ng tatlong nakakaaliw na spelling games.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Talasalitaan (Dictionary)</strong></td>
+                        <td>Diksiyonaryo ng mga salitang Filipino na may kasamang tamang kahulugan at spelling batay sa pambansang ortograpiya.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mga Aralin (Support Doc)</strong></td>
+                        <td>Built-in PDF reader na naglalaman ng mga materyales sa pag-aaral at gabay sa pagbabaybay.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Settings</strong></td>
+                        <td>Configuration panel para sa tunog, volume, at pag-reset ng laro.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>About</strong></td>
+                        <td>Impormasyon tungkol sa layunin at gumawa ng application na HusayBaybay.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="games">
+        <h2>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            3. Mga Mode ng Laro (Game Modes)
+        </h2>
+        <p>May tatlong uri ng laro na may iba't ibang antas ng pagsubok sa pagbabaybay. Ang bawat laro ay may <strong>30 katanungan</strong> na awtomatikong nai-save ang progreso upang maipagpatuloy kung sakaling lumabas sa kalaman.</p>
+
+        <div class="game-grid">
+            <div class="game-card">
+                <span class="game-badge">Laro 1</span>
+                <div class="game-card-title">Flash Pick Game</div>
+                <p>Isang mabilisang laro kung saan pipiliin ang tamang baybay ng salita mula sa tatlong (3) pagpipilian.</p>
+                <ul class="game-features">
+                    <li>May limitasyong 30 segundo bawat tanong.</li>
+                    <li>Piliin ang pindutan na may tamang baybay (hal. KORYENTE vs KURYENTE).</li>
+                    <li><strong>Hint System:</strong> Awtomatikong lilitaw ang Hint Button kapag umabot sa 15 segundo pababa ang natitirang oras upang alisin ang isang maling sagot.</li>
+                </ul>
+            </div>
+
+            <div class="game-card">
+                <span class="game-badge">Laro 2</span>
+                <div class="game-card-title">Audio Game</div>
+                <p>Subukin ang iyong kakayahang makinig at magbaybay sa pamamagitan ng pagtype ng narinig na salita.</p>
+                <ul class="game-features">
+                    <li>I-tap ang Play Audio upang pakinggan ang bigkas ng salita.</li>
+                    <li>I-type ang tamang sagot sa text box at i-tap ang Enter o Done sa keyboard.</li>
+                    <li><strong>Play Counter Tracker:</strong> Kailangang pakinggan ang audio nang hindi bababa sa 3 beses upang ma-unlock ang Hint.</li>
+                    <li>Ang Hint ay nagpapakita ng Kahulugan (Definition) at Pantig (Syllables) na may nakabukas na unang titik (hal. [ B _ ] [ R A N ] [ G A Y ]).</li>
+                </ul>
+            </div>
+
+            <div class="game-card">
+                <span class="game-badge">Laro 3</span>
+                <div class="game-card-title">Definition Game</div>
+                <p>Ayusin ang mga jumbled letters upang mabuo ang salitang inilalarawan sa depinisyon.</p>
+                <ul class="game-features">
+                    <li>Basahin ang kahulugan ng salita sa screen at pindutin ang mga nagulong titik sa ibaba upang punan ang mga bakanteng kahon sa itaas.</li>
+                    <li>Mayroong Shuffle Button upang baguhin ang pagkakaayos ng mga titik sa ibaba.</li>
+                    <li><strong>Dynamic Hint:</strong> Awtomatikong naglalagay ng tamang titik sa susunod na bakanteng kahon at io-lock ito.</li>
+                    <li><strong>Idle Nudge:</strong> Kung hindi gumagalaw o nag-iisip ang manlalaro nang higit sa 12 segundo, gagawa ng banayad na shiver animation ang Hint Button upang paalalahanan ang player.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="settings">
+        <h2>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            4. Pamamahala sa Settings at Progress
+        </h2>
+        <p>Sa tab ng Settings, maaaring ayusin ng mga manlalaro ang sumusunod upang maging mas komportable ang paglalaro:</p>
+        <ul>
+            <li><strong>Voice Volume Slider:</strong> Lakas ng boses ng salita sa Audio Game.</li>
+            <li><strong>Music Volume Slider:</strong> Lakas ng background music ng app.</li>
+            <li><strong>Tap Sound Switch:</strong> I-on o i-off ang tunog kapag pumipindot ng buttons.</li>
+            <li><strong>Reset Progress Button:</strong> Buburahin ang lahat ng kasalukuyang nakasagutan na antas sa tatlong laro at magsisimula muli sa tanong bilang 1. (Hindi nito binubura ang mataas na nakaraang iskor na naka-save sa database ng guro).</li>
+        </ul>
+    </section>
+
+    <section id="admin">
+        <h2>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            5. Dashboard ng Guro (Admin Dashboard)
+        </h2>
+        <p>Ang dashboard na ito ay eksklusibo para sa mga <strong>Guro o Administrator</strong> upang masubaybayan ang pag-unlad ng kanilang mga mag-aaral.</p>
+        <ul>
+            <li><strong>Pangkalahatang Istatistika:</strong> Makikita ang kabuuang bilang ng mga nakarehistrong mag-aaral at ang kabuuang bilang ng mga salita sa diksiyonaryo.</li>
+            <li><strong>Pagsasala ayon sa Seksyon:</strong> Maaaring gamitin ang dropdown menu upang tingnan lamang ang listahan ng mga mag-aaral sa isang partikular na seksyon (hal. <em>Grade 4 - Narra</em>).</li>
+            <li><strong>Pagsusuri ng Iskor at Progreso:</strong> Ipinapakita ng table/listahan ang pangalan, email, iskor sa Flash Pick, at natapos na salita sa Audio Game at Definition Game ng bawat mag-aaral.</li>
+            <li><strong>Pamamahala ng Seksyon (Manage Sections):</strong> Pindutin ang <em>Manage Sections</em> upang magdagdag ng mga bagong seksyon na maaaring piliin ng mag-aaral o magbura ng mga lumang seksyon.</li>
+        </ul>
+    </section>
+
+    <section id="rules" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+        <h2>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            6. Gabay sa Pagsusuri ng Pagbabaybay (Spelling Rules Checklist)
+        </h2>
+        <p>Ang diksiyonaryo ng HusayBaybay ay sumusunod sa pambansang pamantayan ng ortograpiya ng wikang Filipino. Narito ang ilang halimbawa ng tamang spelling na matututuhan sa app:</p>
+        
+        <div class="rules-comparison">
+            <div class="rule-card correct">
+                <div class="rule-card-title">✓ Wastong Baybay (TAMA)</div>
+                <ul>
+                    <li><strong>Ano-ano</strong> (pag-uulit ng salita)</li>
+                    <li><strong>Iba't iba</strong> (may apostrope)</li>
+                    <li><strong>Koryente</strong> (mula sa Kastila)</li>
+                    <li><strong>Haluhalo</strong> (pagkaing pampalamig)</li>
+                    <li><strong>Salusalo</strong> (isang piging/handaan)</li>
+                </ul>
+            </div>
+            <div class="rule-card incorrect">
+                <div class="rule-card-title">✗ Karaniwang Pagkakamali (MALI)</div>
+                <ul>
+                    <li>Anu-ano</li>
+                    <li>Iba-iba (kapag iba't iba ang ibig sabihin)</li>
+                    <li>Kuryente / Kuryenti</li>
+                    <li>Halo-halo (ito ay para sa magkakaibang bagay)</li>
+                    <li>Salo-salo (ito ay para sa magkakasabay na pagkain)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
