@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_brown">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_back_button"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:elevation="4dp"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mga Setting"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#566573"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lakas ng Boses"
+            android:textSize="18sp"
+            android:textColor="#566573"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/seekVoiceVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lakas ng Musika"
+            android:textSize="18sp"
+            android:textColor="#566573"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/seekMusicVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_marginBottom="24dp" />
+
+        <Switch
+            android:id="@+id/switchTapSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tunog ng Pindutan"
+            android:textColor="#566573"
+            android:textSize="16sp"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/btnResetProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="I-reset ang Laro"
+            android:textAllCaps="false"
+            android:backgroundTint="#F5B7B1"
+            android:textColor="#566573" />
+
+    </LinearLayout>
+</ScrollView>
